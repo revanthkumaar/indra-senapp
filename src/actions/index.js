@@ -8,3 +8,8 @@ export const addTodo = (text) => {
       todotext: text,
     };
 }
+
+export const toggleTodo = (id) => ({
+  type: "TOGGLE_TODO",
+  taskid: id
+})

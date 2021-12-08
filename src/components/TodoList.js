@@ -2,12 +2,16 @@ import React from "react";
 import Todo from "./Todo";
 import PropTypes from "prop-types";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, toggleTodoTrigger}) => {
   console.log(todos);
   return (
     <ul>
       {todos.map((todo) => (
-        <Todo key={todo.id} {...todo} />
+        <Todo
+          key={todo.id}
+          {...todo}
+          triggerToggleDispatch ={() => toggleTodoTrigger(todo.id)}
+        />
       ))}
     </ul>
   );
