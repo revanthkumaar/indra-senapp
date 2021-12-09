@@ -1,10 +1,12 @@
 import React from "react";
-import AddTodo from "../containers/AddTodo";
-import VisibleTodoList from "../containers/VisibleTodoList";
+import LoginComponent from "../pages/LoginPage";
+import TaskComp from "../pages/TasksPage";
+import {Route} from "react-router-dom"
+
 const App = () => (
   <div>
-    <AddTodo />
-    <VisibleTodoList />
+    <Route exact path="/task" component={TaskComp} />
+    <Route exact path="/" component={LoginComponent} />
   </div>
 );
 
